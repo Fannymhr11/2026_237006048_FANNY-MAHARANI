@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-slate-800 dark:text-slate-100;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-navy-800/40 border border-slate-200 dark:border-white/10 rounded-2xl;
+  }
+  .stat-accent {
+    @apply border-l-4 border-l-amber-500;
+  }
+  .btn-primary {
+    @apply bg-navy-800 hover:bg-navy-700 text-white;
+  }
+  .btn-amber {
+    @apply bg-amber-500 hover:bg-amber-600 text-white;
+  }
+  .input-base {
+    @apply w-full border border-slate-300 dark:border-white/15 dark:bg-navy-900/40 dark:text-slate-100 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-amber-500 focus:border-transparent;
+  }
+  table.data-table thead th {
+    @apply text-[0.72rem] tracking-wide uppercase text-slate-500 dark:text-slate-400 font-semibold;
+  }
+  table.data-table tbody tr:hover {
+    @apply bg-slate-50 dark:bg-white/5;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
